@@ -2,20 +2,28 @@
 ##variables
 ########################
 set EDITOR vim
-set fish_greeting 
+# function fish_greeting
+#      pokemon-colorscripts -r
+# end
 
 ##################
 #####path
 #################
-
+# cat ~/.cache/wal/sequences
 fish_add_path ~/.local/bin
-#fish_add_path ~/.doom.d
+fish_add_path ~/.bin
+fish_add_path ~/.doom.d
 fish_add_path ~/usr/local/bin
 ##########################################
 ###########     aliases     ##############
 #########################################
 #alias nvim='lvim'
 #alias emacs='emacsclient -c -a 'emacs''
+alias par="paru --noconfirm"
+alias jarr="java -jar"
+alias walmenu="/bin/ls | sxiv -tfio | xargs wal -i "
+alias virtnet="sudo virsh net-start default"
+alias tmx="tmux new -s sh"
 alias grubup="sudo update-grub"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias tarnow='tar -acf '
@@ -34,22 +42,15 @@ alias tarnow='tar -acf '
 alias untar='tar -xvf '
 alias wget='wget -c '
 alias rmpkg="sudo pacman -Rdd"
+alias checknet='ping google.com'
+
 
 # Replace ls with exa
-alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
-alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first --icons'  # long format
-alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
-alias l.="exa -a | egrep '^\.'"                                     # show only dotfiles
-alias ip="ip -color"
-
-## Useful aliases
-# Replace ls with exa
-alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
-alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first --icons'  # long format
-alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
-alias l.="exa -a | egrep '^\.'"                                     # show only dotfiles
+alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
+alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
+alias ll='eza -l --color=always --group-directories-first --icons'  # long format
+alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
+alias l.="eza -a | egrep '^\.'"                                     # show only dotfiles
 alias ip="ip -color"
 
 # Cleanup orphaned packages
@@ -78,5 +79,4 @@ fish_vi_key_bindings
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
-starship init fish | source
-
+#neofetch
