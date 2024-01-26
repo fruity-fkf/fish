@@ -1,4 +1,4 @@
-alias vfd="fd -t f -H  -E .git | fzf-tmux -p | xargs nvim"
+alias vfd="fd -t f -H  -E .git | fzf-tmux -r 110 --reverse  --preview 'bat {} --color always' | xargs nvim"
 alias par="paru --noconfirm"
 alias jarr="java -jar"
 alias walmenu="/bin/ls | sxiv -tfio | xargs wal -i "
