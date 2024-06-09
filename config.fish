@@ -30,7 +30,7 @@ fish_vi_key_bindings
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
-zoxide init fish | source
+zoxide init --cmd cd fish | source
 fzf --fish | source
 #neofetch
 fish_add_path /home/fkf/.spicetify
