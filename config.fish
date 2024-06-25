@@ -1,36 +1,22 @@
-#########################
-##variables
-########################
-set EDITOR vim
- function fish_greeting
-   #pokemon-colorscripts -r
- end
+set -g fish_greeting
 
-##################
-#####path
-#################
-# cat ~/.cache/wal/sequences
-fish_add_path ~/.local/bin
-fish_add_path ~/.bin
-fish_add_path ~/.doom.d
-fish_add_path ~/usr/local/bin
-fish_add_path ~/.cargo/bin
-##########################################
-###########     aliases     ##############
-#########################################
-source ~/.config/fish/alias.fish
-
-########################################
-########################################
-
-##############################################
-############startup#######################
-#############################################
-fish_vi_key_bindings
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    starship init fish | source
 end
-zoxide init --cmd cd fish | source
-fzf --fish | source
-#neofetch
-fish_add_path /home/fkf/.spicetify
+
+# List Directory
+alias ls="lsd"
+alias l="ls -l"
+alias la="ls -a"
+alias lla="ls -la"
+alias lt="ls --tree"
+
+# Handy change dir shortcuts
+abbr .. 'cd ..'
+abbr ... 'cd ../..'
+abbr .3 'cd ../../..'
+abbr .4 'cd ../../../..'
+abbr .5 'cd ../../../../..'
+
+# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
+abbr mkdir 'mkdir -p'
