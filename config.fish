@@ -1,22 +1,41 @@
-set -g fish_greeting
+#########################
+##variables
+########################
+set EDITOR vim
+ function fish_greeting
+   #pokemon-colorscripts -r
+ end
 
-if status is-interactive
-    starship init fish | source
+##################
+#####path
+#################
+# cat ~/.cache/wal/sequences
+fish_add_path ~/.local/bin
+fish_add_path ~/.bin
+fish_add_path ~/.doom.d
+fish_add_path ~/usr/local/bin
+fish_add_path ~/.cargo/bin
+##########################################
+###########     aliases     ##############
+#########################################
+source ~/.config/fish/alias.fish
+source ~/.config/fish/nvim_versions.fish
+########################################
+########################################
+
+##############################################
+############startup#######################
+#############################################
+fish_vi_key_bindings
+zoxide init --cmd cd fish | source
+fzf --fish | source
+#neofetch
+fish_add_path /home/fkf/.spicetify
+
+
+
+function starship_transient_prompt_func
+  starship module character
 end
-
-# List Directory
-alias ls="lsd"
-alias l="ls -l"
-alias la="ls -a"
-alias lla="ls -la"
-alias lt="ls --tree"
-
-# Handy change dir shortcuts
-abbr .. 'cd ..'
-abbr ... 'cd ../..'
-abbr .3 'cd ../../..'
-abbr .4 'cd ../../../..'
-abbr .5 'cd ../../../../..'
-
-# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
-abbr mkdir 'mkdir -p'
+starship init fish | source
+enable_transience
