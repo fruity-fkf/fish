@@ -2,9 +2,15 @@
 
 I am using [fisher](https://github.com/jorgebucaran/fisher) as the plugin manager
 
-the prompt is tide 
+I am using starship as the prompt
 
-run ```tide configure``` to configure the prompt
+| dependencies |
+| ------------- |
+| FZF |
+| EZA |
+| Zoxide |
+| Fish (obviously)|
+
 
 that's all
 
