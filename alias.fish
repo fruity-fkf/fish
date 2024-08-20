@@ -1,4 +1,5 @@
 #alias spot='~/.config/spotifyd/spotify.sh'
+alias ta="tmux attach"
 alias mvenv="python -m venv"
 alias apy="source bin/activate.fish"
 alias zj="zellij"
