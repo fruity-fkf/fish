@@ -28,7 +28,6 @@ source ~/.config/fish/nvim_versions.fish
 #############################################
 fish_vi_key_bindings
 zoxide init --cmd cd fish | source
-fzf --fish | source
 #neofetch
 fish_add_path /home/fkf/.spicetify
 
