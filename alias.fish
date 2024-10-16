@@ -64,7 +64,7 @@ alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+besta
 # MISC (most of the aliases tbh 😭 )
 
 alias vfd="fd -t f -H  -E .git | fzf-tmux -r 110 --reverse  --preview 'bat {} --color always' | xargs nvim"
-alias hff="fd -t f -H  -E .git | fzf-tmux -r 110 --reverse  --preview 'bat {} --color always' | xargs nvim"
+alias hff="fd -t f -H  -E .git | fzf-tmux -r 110 --reverse  --preview 'bat {} --color always' | xargs hx"
 alias hxx="~/.config/fish/helix-recent.sh"
 alias jarr="java -jar"
 alias walmenu="/bin/ls | sxiv -tfio | xargs wal -i "
