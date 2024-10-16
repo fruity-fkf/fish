@@ -26,10 +26,10 @@ alias untar='tar -xvf '
 
 # Replace ls with exa
 alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
-alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
-alias ll='eza -l --color=always --group-directories-first --icons'  # long format
+alias la='eza -a --color=always --group-directories-first --icons' # all files and dirs
+alias ll='eza -l --color=always --group-directories-first --icons' # long format
 alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
-alias l.="eza -a | grep -E '^\.'"                                     # show only dotfiles
+alias l.="eza -a | grep -E '^\.'" # show only dotfiles
 alias ip="ip -color"
 
 # Cleanup orphaned packages
@@ -64,6 +64,8 @@ alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+besta
 # MISC (most of the aliases tbh 😭 )
 
 alias vfd="fd -t f -H  -E .git | fzf-tmux -r 110 --reverse  --preview 'bat {} --color always' | xargs nvim"
+alias hff="fd -t f -H  -E .git | fzf-tmux -r 110 --reverse  --preview 'bat {} --color always' | xargs nvim"
+alias hxx="~/.config/fish/helix-recent.sh"
 alias jarr="java -jar"
 alias walmenu="/bin/ls | sxiv -tfio | xargs wal -i "
 alias virtnet="sudo virsh net-start default"
