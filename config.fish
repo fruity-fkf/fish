@@ -30,7 +30,7 @@ fish_vi_key_bindings
 zoxide init --cmd cd fish | source
 #neofetch
 fish_add_path /home/fkf/.spicetify
-
+source (/home/fkf/.nix-profile/bin/starship init fish --print-full-init | psub)
 
 
 function starship_transient_prompt_func
